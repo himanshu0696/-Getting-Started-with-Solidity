@@ -1,45 +1,55 @@
-// SPDX-License-Identifier: MIT
-pragma solidity 0.8.18;
+# Project Title
 
-/*
-       REQUIREMENTS
-    1. Your contract will have public variables that store the details about your coin (Token Name, Token Abbrv., Total Supply)
-    2. Your contract will have a mapping of addresses to balances (address => uint)
-    3. You will have a mint function that takes two parameters: an address and a value. 
-       The function then increases the total supply by that number and increases the balance 
-       of the “sender” address by that amount
-    4. Your contract will have a burn function, which works the opposite of the mint function, as it will destroy tokens. 
-       It will take an address and value just like the mint functions. It will then deduct the value from the total supply 
-       and from the balance of the “sender”.
-    5. Lastly, your burn function should have conditionals to make sure the balance of "sender" is greater than or equal 
-       to the amount that is supposed to be burned.
-*/
+Getting Started with Solidity
 
-contract MyToken {
+## Description
+"Getting Started with Solidity" is an introductory project designed to help beginners learn the basics of Solidity, the programming language for writing smart contracts on the Ethereum blockchain. The project covers fundamental concepts, syntax, and provides hands-on examples to build a strong foundation in blockchain development.
 
-    // public variables here
-string public takenName="META";
-string public tokenAbbrv = "MTA";
-uint public totalSupply =0;
+# Getting Started
 
-    // mapping variable here
-mapping (address => unit) public balances;
+### Installing
 
 
-    // mint function
-function mint (address _address,unit _value) pulic{
-totalSupply += _value;
-balances[_address] += _value;
-}
+### Executing program
+
+To get started with Solidity, you can download the necessary tools and resources from the following sources:
+
+Solidity Compiler
+Node.js and npm
+Truffle Suite
+Ganache
+
+```
+Modifications Needed to be Made to Files/Folders
+
+1)Setting Up Project Directory:
+
+sh
+mkdir my-solidity-project
+cd my-solidity-project
+
+2)Initialize Truffle Project:
+sh
+truffle init
+
+3)Migrations:
+
+Create migration scripts in the migrations folder to deploy your contracts. These scripts will handle the deployment process.
+
+4)Install Dependencies:
+
+If your project requires additional npm packages, install them using npm. For example, to install OpenZeppelin libraries:
+sh
+npm install @openzeppelin/contracts
+
+## Authors
+
+Himanshu Rajoria
 
 
-    // burn function
-function burn (address _address, unit _value) public {
-if(balances[_address] >= _value;
-totalSupply -= _value;
-balances[_address] -= _value;
-}
-}
+ex. [gmail-himanshu.rajoria2003@gmail.com]
 
 
-}
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
